@@ -1,0 +1,260 @@
+#include <iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+
+struct Owner {
+	string Name;
+	string Numbre;
+};
+struct Adress {
+	string Codepostal;
+};
+struct Car {
+	string Brand;
+	string Model;
+	int	Years;
+	Owner Owner;
+	Adress Adress;
+};
+
+enum color { red, blue, black, orange };
+enum week {sat,sun,mon,tue,wed,thu,fri};
+enum gendor{men=1,woman=0};
+
+int main()
+
+{
+	// this code will print my name in the screen
+	std::cout << "mahmoud zenibi" << std::endl;
+	cout << "mahmoud zenibi" << endl;
+
+	// this code will print my name in the screen
+	std::cout << "mahmoud zenibi \n";
+	cout << "mahmoud zenibi \n";
+
+	// ESCAPE SEQUENCE
+	cout << "M1\\M2 \n";
+	cout << "M1\tM2 \n";
+	cout << "My name is \"Mahmoud\" \n";
+
+	/// Output
+
+	//variable
+	int MyAge = 45;
+	char letter = 'm';
+	string Myname = "Mahmoud";
+	bool Myboolean = true;
+	//const
+	const float Pi = 3.14;
+	const double fullPi = 3.141592653589793;
+	const int MinutesPerHour = 60;
+	//display
+	cout << MyAge << endl;
+	cout << letter << endl;
+	cout << Myname << endl;
+	cout << Myboolean << endl;
+	cout << MinutesPerHour << endl << fullPi << endl << Pi << endl;
+
+	// +
+	int a = 10, b = 5, sum = a + b;
+	cout << sum << endl; // Output: 15
+
+	// reverce
+	char char1 = 'A', char2 = 'B', char3 = 'C';
+	cout << char1 << char2 << char3 << " reversed is " << char3 << char2 << char1 << endl;
+
+	// reverce++
+	int K = 1, L = 2, temp;
+	temp = K
+		, K = L
+		, L = temp;
+	cout << "K=" << K << endl << "L=" << L << endl;
+
+	/// Input
+
+	char MYchar;
+	int MYint;
+
+	cout << "enter your charcter " <<endl;
+	cin >> MYchar;
+
+	cout << "enter your entier: " <<endl;
+	cin >> MYint;
+
+	cout << "my charcter is " << MYchar << " my entier is  " << MYint <<endl;
+
+	// A++ vs ++A
+	int A = 10;
+	int B = A++;
+
+	cout << "B= " << B << endl;
+	cout << "A= " << A << endl;
+
+	B = ++A;  // A=11 db 
+	cout << "B= " << B << endl;
+	cout << "A= " << A << endl;
+
+	//relational operators
+	int A, B;
+
+	cout << "enter A: ";
+	cin >> A;
+	cout << "enter B: ";
+	cin >> B;
+
+	A == B;
+	A != B;
+	A > B;
+	A < B;
+	A >= B;
+	A <= B;
+
+	cout << "50 == 50 is " << (A == B) << endl;
+	cout << "50 != 50 is " << (A != B) << endl;
+	cout << "50 >  50 is " << (A > B) << endl;
+	cout << "50 <  50 is " << (A < B) << endl;
+	cout << "50 >= 50 is " << (A >= B) << endl;
+	cout << "50 <= 50 is " << (A <= B) << endl;
+
+	//logique operator
+
+	bool A = 1, B = 0;
+
+	cout << (A && B) << endl;
+	cout << (A || B) << endl;
+	cout << !A << endl;
+	cout << !B << endl;
+	cout << !(A && B) << endl;
+	cout << !(A || B) << endl;
+
+	//// cmath
+	 
+	// Squair Root
+	double x=64;
+
+	cout << "square root value of 64: " << sqrt(x) << endl;
+	cout << "square root value of 50: " << sqrt(50) << endl;
+
+	//Rounding Numbers
+	
+	cout << round(2.4) << endl;
+	cout << round(2.5) << endl;
+	cout << round(2.7) << endl;
+
+	cout << sqrt(50) << endl;
+	cout << round(sqrt(50)) << endl; 
+	
+	//Power Function 
+	int x=2, y=4;
+
+	cout << "Power value: x^y=(2^4) : " << pow(x, y) << endl; //x=base ; y=power
+	cout << "Power value: x^y=(10^20) : " << pow(10, 20) << endl;
+
+	// Ceil & floor Functions
+	
+	cout <<"ceiling value of 2.9 : " << ceil(2.9) << endl; // the largest integer number from it
+	cout <<"Floor value of 2.9 : " << floor(2.9) << endl; // the smallest integer number from it
+
+	cout << ceil(-2.9) << endl;
+	cout << floor(-2.9) << endl;
+
+	//Absolute Function
+
+	cout << abs(-10) << endl; //9ima motla9a
+	cout << abs(10) << endl;
+
+	// structer 
+
+	Car Car_1;
+
+	Car_1.Brand = "BMW";
+	Car_1.Model = "X5";
+	Car_1.Years = 2000;
+
+	Car_1.Owner.Name = "Mohamed";
+	Car_1.Owner.Numbre = "0777262473";
+
+	Car_1.Adress.Codepostal = "112200";
+
+	cout << " Name= " << Car_1.Owner.Name << " Numbre= " << Car_1.Owner.Numbre << endl;
+	cout << " Adress = " << Car_1.Adress.Codepostal;
+	cout << "" << Car_1.Adress.Codepostal;
+
+	// enums
+
+	color Mycolor;
+	week Myweek;
+	gendor mygender;
+
+	Mycolor = color::red; // (red=0/blue=1/black=2/orange=3)
+	Myweek = week::sun; 
+	mygender = gendor::men; // (men=1/woman=0) 7it ana n9dr nr9mhom or default(0,1,2,...)
+
+	cout << "color is: " << Mycolor << "week is: " << Myweek << "i'm a: " << mygender;
+
+	/// Converting   (!) #include <string>
+
+	// (1) conversion from double to int
+	int Num_1;
+	double Num_2 = 10.15;
+	
+	Num_1 = Num_2;// IMPLICIT 
+	Num_1 = (int)Num_2; //Explicit Conversion (1)
+	Num_1 = int(Num_2); //Explicit Convertion  (2)
+	cout << Num_1 << endl;
+
+	// (2) conversion from (sto(int/float/double))	
+
+	string Num_3 = "123,456";
+
+
+	int num_int = stoi(Num_3);  //stoi= string to int
+
+	float num_float = stof(Num_3); //stof= string to float
+
+	double num_double = stod(Num_3); //stod= string to double
+
+	cout << num_int << endl;
+	cout << num_float << endl;
+	cout << num_double << endl;
+
+	/// (3) conversion Numbres to string	(to_string)
+
+	int Num_4 = 19;
+	double Num_5 = 13.5;
+
+	string St_1, St_2;
+
+	St_1 = to_string(Num_4);
+	St_2 = to_string(Num_5);
+
+	cout << St_1;
+	cout << St_2;
+
+	///string
+	//1)
+	string Mystr = "123456789abc";
+
+	cout << Mystr.length() << endl;
+	cout << Mystr[2] << endl;/// kibda mn 0,1,2...
+	//2)1
+	string S1 = "10", S2 = "20";
+	string S3 = S1 + S2;
+	cout << S3 << endl;/// will print "1020"
+	int sum_1 = stoi(S1) + stoi(S2);/// will print 30 
+	cout << sum_1 << endl;
+	//2)2
+	string S4 = "AB", S5 = "BC";
+	string S6 = S4 + S5;
+	cout << S6 << endl;/// will print "ABCD"
+	/*int sum_2= stoi(S1) + stoi(S2);*/ /// !! Eror (AB to int) int=kib5i 5ir ar9am
+	//3)
+	string Full_Name;
+	cin >> Full_Name; // mahmoud zenibi 
+	cout << Full_Name; // mahmoud (without zenibi)
+
+	getline(cin, Full_Name);// mahmoud zenibi
+	cout << Full_Name; // mahmoud zenibi 
+	return 0;
+}
