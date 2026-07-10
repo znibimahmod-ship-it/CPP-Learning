@@ -61,7 +61,7 @@ All code in this repository follows these guidelines:
 ## 📞 Contact & References
 
 - **GitHub**: [znibimahmod-ship-it](https://github.com/znibimahmod-ship-it)
-- **Repository**: [C-note](https://github.com/znibimahmod-ship-it/C-note)
+- **Repository**: [CPP-Learning](https://github.com/znibimahmod-ship-it/C-note)
 
 ## 📄 License
 
@@ -75,3 +75,4 @@ This repository is for educational purposes.
 
 **Last Updated**: June 2026  
 **Status**: 🟡 In Progress - Active Learning Phase
+                                                                    الحمد لله
