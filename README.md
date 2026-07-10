@@ -74,6 +74,7 @@ This repository is for educational purposes.
 > "The best way to learn programming is by doing. So, let's code!" 💻
 
 **Last Updated**: June 2026  
-**Status**: 🟡 In Progress - Active Learning Phase
+**Status**: 🟡 In Progress - Active Learning Phase    
 
+'                                                                                                                           '
                                                                     الحمد لله
