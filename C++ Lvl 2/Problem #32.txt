@@ -29,13 +29,11 @@ void Print_Array(int N, int arr[100]) {
 }
 
 void ReverseArray(int lenght,int arr1[100],int arr2[100]) {
-	int L = lenght - 1;
-
 	for (int i = 0; i < lenght; i++) {
-		arr2[L] = arr1[i];
-		L--;
+		arr2[i] = arr1[lenght - 1 - i];
 	}
 }
+
 
 int main() {
 	int lenght = ReadPositiveNumber("Enter number of elements: ");
