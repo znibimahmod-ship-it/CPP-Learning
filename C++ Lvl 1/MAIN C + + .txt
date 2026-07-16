@@ -17,10 +17,15 @@ struct Car {
 	Owner Owner;
 	Adress Adress;
 };
+struct stPersonne {
+	string name;
+	int age;
+	string phone;
+};
 
 enum color { red, blue, black, orange };
-enum week {sat,sun,mon,tue,wed,thu,fri};
-enum gendor{men=1,woman=0};
+enum week { sat, sun, mon, tue, wed, thu, fri };
+enum gendor { men = 1, woman = 0 };
 
 int main()
 
@@ -184,7 +189,7 @@ int main()
 	// enums
 
 	color Mycolor;
-	week Myweek;
+	week Myweek;	
 	gendor mygender;
 
 	Mycolor = color::red; // (red=0/blue=1/black=2/orange=3)
@@ -254,7 +259,56 @@ int main()
 	cin >> Full_Name; // mahmoud zenibi 
 	cout << Full_Name; // mahmoud (without zenibi)
 
+	cin.ignore();//darori bax mit9rax (enter) 
 	getline(cin, Full_Name);// mahmoud zenibi
 	cout << Full_Name; // mahmoud zenibi 
+
+	/// Arrays
+	string w = "mahmoud-ze nibi";
+
+	cout << w[0] << endl;
+	cout << w[1] << endl;
+	cout << w[7] << endl;
+	cout << w[10] << endl;
+
+	int w[6] = { 1,2 };
+	w[2] = 3;
+	w[3] = 4;
+	cout << "y[5]= " << endl; cin >> w[5];
+	cout << w[5] << "+" << w[0] << "=" << w[5] + w[0];
+
+	//Arrays structers
+	stPersonne Persons[2];//pers_1 (0) and pers_2 (1)
+	Persons[0].name = "mahmoud";
+	Persons[0].age = 18;
+	Persons[0].phone = "0777262473";
+
+	Persons[1].name = "ahmed";
+	Persons[1].age = 19;
+	Persons[1].phone = "0677262473";
+
+	cout << Persons[0].name << endl;
+	cout << Persons[1].name << endl;
+
+	//RANDOM FUNCTION CHAR()
+	/*switch (x) {
+	case(small_letter):
+		return rand() % (122 - 97 + 1) + 97;
+		break;
+
+	case(Capital_letter):
+		return rand() % (90 - 65 + 1) + 65;
+		break;
+
+	case(Special_caracter):
+		return rand() % (47 - 33 + 1) + 33;
+		break;
+
+	case(Digit):
+		return rand() % (57 - 48 + 1) + 48;
+		break;
+
+	}*/
+
 	return 0;
 }
