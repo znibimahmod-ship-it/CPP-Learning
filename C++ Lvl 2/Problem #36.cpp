@@ -20,18 +20,19 @@ void Print_Array(int N, int arr[100]) {
 	cout << endl;
 }
 void AddInputToArray(int arr1[100], int& lenght) {
-	int N, C;
+	int N;
+	bool AddMore = true;
 	do {
 		cout << "Please enter a number : ";
 		cin >> N;
 		arr1[lenght] = N;
 		cout << "Do you want to add more numbers? [0]:No / [1]:Yes";
-		cin >> C;
-		if (C == 1) {
+		cin >> AddMore;
+		if (AddMore) {
 			lenght++;
 		}
 
-	} while (C != 0);
+	} while (AddMore);
 }
 int main() {
 	int lenght = 1;
