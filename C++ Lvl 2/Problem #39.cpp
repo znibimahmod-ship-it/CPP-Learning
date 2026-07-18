@@ -34,6 +34,17 @@ void Print_Array(int N, int arr[100]) {
 	}
 	cout << endl;
 }
+bool isPrimeNumber(int Num) {
+	if (Num > 1) {
+		for (int i = 2; i < Num; i++) {
+			if (Num % i == 0) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
 void AddArrayElement(int number, int arr2[100], int& arr2length)
 {
 	arr2length++;
@@ -43,7 +54,7 @@ void AddArrayElement(int number, int arr2[100], int& arr2length)
 void CopyArrayUsingAddArrayElement(int arr1[100], int arr2[100], int arr1length, int& arr2length)
 {
 	for (int i = 0; i < arr1length; i++) {
-		if (arr1[i] % 2 != 0) {
+		if (isPrimeNumber(arr1[i])) {
 			AddArrayElement(arr1[i], arr2, arr2length);
 		}
 	}
@@ -63,7 +74,7 @@ int main() {
 	//Copy
 	CopyArrayUsingAddArrayElement(arr1, arr2, arr1length, arr2length);
 	//Print
-	cout << "Array 2 Odd element: " << endl;
+	cout << "Array 2 Prime element: " << endl;
 	Print_Array(arr2length, arr2);
 
 	return 0;
