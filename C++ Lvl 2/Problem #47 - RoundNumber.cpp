@@ -11,24 +11,20 @@ float Get_decimal_point(float N) {
 
 int MY_ROUND(float Number) {
 	float decimal = Get_decimal_point(Number);
+	int IntPart = (int)Number;
 
-	if (Number > 0) {
-		if (decimal >= 0.5) {
-			return Number - decimal + 1;
+	if (abs(decimal) >= .5) {
+		if (Number > 0) {
+			return ++IntPart;
 		}
-		else if (decimal < 0.5) {
-			return Number - decimal;
-		}
-	}
-	else if (Number < 0) {
-		if (decimal <= -0.5) {
-			return Number - decimal - 1;
-		}
-		else if (decimal > -0.5) {
-			return Number - decimal;
+		else {
+			return --IntPart;
 		}
 	}
-	return Number;
+	else {
+		return IntPart;
+	}
+
 }
 int main() {
 	float N;
