@@ -42,16 +42,20 @@ All code in this repository follows these guidelines:
 
 ## 🔄 Progress Tracking
 
-### Completed Topics
-- [X] Algorithms
-- [x] C++ Basics
-- [x] Data Types & Variables
-- [X] Control Flow
-- [X] Functions
-- [X] Arrays & Strings
-- [ ] Pointers & References
-- [ ] OOP Concepts
-- [ ] Data Structures
+📚 Topics Covered
+✅ C++ Basics
+✅ Variables & Data Types
+✅ Operators
+✅ Conditions
+✅ Loops
+✅ Functions
+✅ Arrays
+✅ Strings
+✅ Enums & Structs
+🔄 Pointers & References
+⏳ Object-Oriented Programming (OOP)
+⏳ Data Structures
+⏳ Algorithms
 
 ## 📅 Timeline
 
