@@ -1,82 +1,102 @@
-# C++ Learning Journey 🚀
+# 🚀 C++ Learning Journey
 
 Welcome to my C++ learning repository!
 
-This repository documents my journey of learning **C++**, improving my **problem-solving skills**, and building a strong foundation in **algorithms** and **data structures**. It contains practice problems, mini projects, notes, and implementations created throughout my learning process.
+This repository documents my journey of learning **C++** from the fundamentals to more advanced concepts. It includes course exercises, problem-solving challenges, and mini projects that I build while improving my programming skills.
+
+My goal is not only to learn the C++ language, but also to develop strong logical thinking and write clean, organized, and efficient code.
 
 ---
 
-## 📂 Repository Structure
+# 📂 Repository Structure
 
 ```text
 CPP-Learning/
 │
-├── Problems/      # Problem-solving exercises
-├── Projects/      # Mini C++ projects
-├── Notes/         # Learning notes and explanations
+├── C++ Lvl 1/      # C++ Fundamentals
+├── C++ Lvl 2/      # Intermediate C++
+├── Projects/       # Console Applications
 └── README.md
 ```
 
 ---
 
-## 🎯 Goals
+# 🎯 Learning Goals
 
-* Learn modern C++ fundamentals.
-* Improve algorithmic thinking.
-* Practice data structures.
-* Solve programming problems consistently.
-* Write clean and organized code.
-* Build small console applications.
-
----
-
-## 📚 Topics Covered
-
-* ✅ C++ Basics
-* ✅ Variables & Data Types
-* ✅ Operators
-* ✅ Conditions
-* ✅ Loops
-* ✅ Functions
-* ✅ Arrays
-* ✅ Strings
-* ✅ Enums & Structs
-* 🔄 Pointers & References
-* ⏳ Object-Oriented Programming (OOP)
-* ⏳ Data Structures
-* ⏳ Algorithms
+- Master C++ fundamentals
+- Improve problem-solving skills
+- Learn clean coding practices
+- Build mini console applications
+- Prepare for Data Structures & Algorithms
+- Build a strong programming foundation
 
 ---
 
-## 💻 Projects
+# 📚 Topics Covered
 
-This repository also contains small console applications to apply what I learn, such as:
+## ✅ Completed
 
-* Rock Paper Scissors Game
-* More projects coming soon...
+- Variables & Data Types
+- Operators
+- Conditions
+- Loops
+- Functions
+- Arrays
+- Strings
+- Enums
+- Structs
+- Problem Solving
+
+## 🔄 Currently Learning
+
+- Pointers & References
+
+## ⏳ Coming Next
+
+- Object-Oriented Programming (OOP)
+- Data Structures
+- Algorithms
+- STL
 
 ---
 
-## 📖 Learning Resources
+# 💻 Projects
 
-* **Programming Advices** – C++ Course
-* *Clean Code* — Robert C. Martin
+Projects are created to apply the concepts learned throughout the course.
 
----
+### Current Projects
 
-## 📈 Progress
+- 🎮 Rock Paper Scissors Game
 
-This repository is updated regularly as I continue learning and solving new problems.
-
----
-
-## 🔗 Links
-
-* **GitHub:** https://github.com/znibimahmod-ship-it
-* **Repository:** https://github.com/znibimahmod-ship-it/CPP-Learning
+More projects will be added as I continue learning.
 
 ---
 
-> *"The best way to learn programming is by writing code every day."*
+# 📖 Learning Resources
 
-**Status:** 🟢 Active Development
+- Programming Advices – C++ Course
+- Clean Code — Robert C. Martin
+
+---
+
+# 📈 Progress
+
+This repository is continuously updated as I complete new lessons, solve programming problems, and build new projects.
+
+---
+
+# 🔗 GitHub
+
+Repository:
+
+**CPP-Learning**
+
+https://github.com/znibimahmod-ship-it/CPP-Learning
+
+---
+
+> **"The best way to learn programming is by writing code every single day."** 💻
+
+## 🟢 Status
+
+Actively Learning & Building
