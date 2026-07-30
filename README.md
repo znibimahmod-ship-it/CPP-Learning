@@ -1,84 +1,82 @@
-# C++ Learning Course: Algorithms & Problem Solving
+# C++ Learning Journey 🚀
 
-Welcome to my personal C++ learning repository! This is a dedicated space where I document my journey through mastering C++ programming with a strong focus on **algorithms**, **data structures**, and **competitive problem-solving**.
+Welcome to my C++ learning repository!
 
-## 📌 Repository Overview
-
-This repository serves as a comprehensive study guide and code collection for learning C++ from fundamentals to advanced topics. It contains:
-- **Algorithm implementations** (sorting, searching, dynamic programming, etc.)
-- **Data structure tutorials** (arrays, linked lists, trees, graphs, etc.)
-- **Problem-solving solutions** (LeetCode, HackerRank, CodeForces, etc.)
-- **Competitive programming techniques** and best practices
-- **Coding notes and documentation**
-
-## 🎯 Course Objectives
-
-By working through this repository, I aim to:
-
-✅ Master fundamental C++ syntax and concepts  
-✅ Understand and implement core data structures efficiently  
-✅ Learn and optimize various algorithms  
-✅ Develop strong problem-solving skills  
-✅ Prepare for competitive programming  
-✅ Build production-quality code practices  
-
-## 🎓 Learning Resources
-
-### Official Learning 
-- [C++ Course](https://programmingadvices.com/) - Comprehensive C++ In the better Way
-
-### Books & References
-- [Clean Code] - By Robert C.Martin
-
-## 📝 Code Quality Standards
-
-All code in this repository follows these guidelines:
-- ✅ Clear variable names
-- ✅ Proper comments for complex logic
-- ✅ Efficient algorithms
-- ✅ Error handling
-- ✅ Tested on multiple test cases
-- ✅ Follows C++ best practices
-
-## 🔄 Progress Tracking
-
-📚 Topics Covered
-✅ C++ Basics
-✅ Variables & Data Types
-✅ Operators
-✅ Conditions
-✅ Loops
-✅ Functions
-✅ Arrays
-✅ Strings
-✅ Enums & Structs
-🔄 Pointers & References
-⏳ Object-Oriented Programming (OOP)
-⏳ Data Structures
-⏳ Algorithms
-
-## 📅 Timeline
-
-**Started**: September 2025  
-**Current Phase**: Data Structures & Algorithms  
-**Target Completion**: Ongoing (Continuous learning)
-## 📞 Contact & References
-
-- **GitHub**: [znibimahmod-ship-it](https://github.com/znibimahmod-ship-it)
-- **Repository**: [CPP-Learning](https://github.com/znibimahmod-ship-it/C-note)
-
-## 📄 License
-
-This repository is for educational purposes.
+This repository documents my journey of learning **C++**, improving my **problem-solving skills**, and building a strong foundation in **algorithms** and **data structures**. It contains practice problems, mini projects, notes, and implementations created throughout my learning process.
 
 ---
 
-## 🚀 Let's Start Learning!
+## 📂 Repository Structure
 
-> "The best way to learn programming is by doing. So, let's code!" 💻
+```text
+CPP-Learning/
+│
+├── Problems/      # Problem-solving exercises
+├── Projects/      # Mini C++ projects
+├── Notes/         # Learning notes and explanations
+└── README.md
+```
 
-**Last Updated**: June 2026  
-**Status**: 🟡 In Progress - Active Learning Phase    
+---
 
-'                                                                                                                           '
-                                                                    الحمد لله
+## 🎯 Goals
+
+* Learn modern C++ fundamentals.
+* Improve algorithmic thinking.
+* Practice data structures.
+* Solve programming problems consistently.
+* Write clean and organized code.
+* Build small console applications.
+
+---
+
+## 📚 Topics Covered
+
+* ✅ C++ Basics
+* ✅ Variables & Data Types
+* ✅ Operators
+* ✅ Conditions
+* ✅ Loops
+* ✅ Functions
+* ✅ Arrays
+* ✅ Strings
+* ✅ Enums & Structs
+* 🔄 Pointers & References
+* ⏳ Object-Oriented Programming (OOP)
+* ⏳ Data Structures
+* ⏳ Algorithms
+
+---
+
+## 💻 Projects
+
+This repository also contains small console applications to apply what I learn, such as:
+
+* Rock Paper Scissors Game
+* More projects coming soon...
+
+---
+
+## 📖 Learning Resources
+
+* **Programming Advices** – C++ Course
+* *Clean Code* — Robert C. Martin
+
+---
+
+## 📈 Progress
+
+This repository is updated regularly as I continue learning and solving new problems.
+
+---
+
+## 🔗 Links
+
+* **GitHub:** https://github.com/znibimahmod-ship-it
+* **Repository:** https://github.com/znibimahmod-ship-it/CPP-Learning
+
+---
+
+> *"The best way to learn programming is by writing code every day."*
+
+**Status:** 🟢 Active Development
