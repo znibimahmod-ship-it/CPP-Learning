@@ -13,9 +13,10 @@ My goal is not only to learn the C++ language, but also to develop strong logica
 ```text
 CPP-Learning/
 │
-├── C++ Lvl 1/      # C++ Fundamentals
-├── C++ Lvl 2/      # Intermediate C++
-├── Projects/       # Console Applications
+├── C++ Lvl 1/
+├── C++ Lvl 2/
+├── C++ Lvl ...
+├── Projects/
 └── README.md
 ```
 
