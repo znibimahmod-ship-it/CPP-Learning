@@ -81,15 +81,12 @@ This repository is continuously updated as I complete new lessons, solve program
 
 ---
 
-# 🔗 GitHub
+# 🌐 Connect
 
-Repository:
+- 💻 **GitHub:** https://github.com/znibimahmod-ship-it
+- 💼 **LinkedIn:** www.linkedin.com/in/mahmoud-zenibi-2a5331385
+- 📧 **Email:** znibimahmod@gmail.com
 
-**CPP-Learning**
-
-https://github.com/znibimahmod-ship-it/CPP-Learning
-
----
 
 > **"الحمد لله أولًا وآخرًا"** 💻
 
