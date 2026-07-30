@@ -2,7 +2,7 @@
 
 Welcome to my C++ learning repository!
 
-This repository documents my journey of learning **C++** from the fundamentals to more advanced concepts. It includes course exercises, problem-solving challenges, and mini projects that I build while improving my programming skills.
+This repository documents my journey of learning **C++** from the fundamentals to more advanced concepts. It includes course exercises, problem-solving challenges, and projects that I build while improving my programming skills.
 
 My goal is not only to learn the C++ language, but also to develop strong logical thinking and write clean, organized, and efficient code.
 
