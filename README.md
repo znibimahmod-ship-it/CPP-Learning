@@ -48,12 +48,8 @@ CPP-Learning/
 - Structs
 - Problem Solving
 
-## 🔄 Currently Learning
-
-- Pointers & References
-
 ## ⏳ Coming Next
-
+- Pointers & References
 - Object-Oriented Programming (OOP)
 - Data Structures
 - Algorithms
@@ -96,8 +92,5 @@ https://github.com/znibimahmod-ship-it/CPP-Learning
 
 ---
 
-> **"The best way to learn programming is by writing code every single day."** 💻
+> **"الحمد لله أولًا وآخرًا"** 💻
 
-## 🟢 Status
-
-Actively Learning & Building
