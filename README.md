@@ -52,7 +52,6 @@ CPP-Learning/
 - Pointers & References
 - Object-Oriented Programming (OOP)
 - Data Structures
-- Algorithms
 - STL
 
 ---
