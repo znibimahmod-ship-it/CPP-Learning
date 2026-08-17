@@ -32,7 +32,7 @@ int ReadNumberFromTo(string message, int From, int To) {
 }
 
 int RandNumFromTO(int From, int To) {
-	////srand(time(NULL));//we chande seed by the time from 1970 to the present time (auto) + !! put it in the main()
+
 	int RanNum = rand() % (To - From + 1) + From;
 
 	return RanNum;
@@ -124,7 +124,7 @@ void CheckAnswer(int U_anwser, int R_answer, int& N_RightAnswer, int& N_WrongAns
 	}
 }
 
-string Result(int NumQuestion, int NumRightAnswers) {//5  "dhkdqhjwd"
+string Result(int NumQuestion, int NumRightAnswers) {
 	double avg = (double)NumQuestion / 2;
 
 	int Average = ceil(avg);
@@ -141,7 +141,7 @@ string Result(int NumQuestion, int NumRightAnswers) {//5  "dhkdqhjwd"
 }
 
 void checkType(stInputs& Input) {
-	if (Input.Type == MixOP) {//Mix
+	if (Input.Type == MixOP) {
 		Input.newOPType = (enType)RandNumFromTO(1, 4);
 	}
 	else {
