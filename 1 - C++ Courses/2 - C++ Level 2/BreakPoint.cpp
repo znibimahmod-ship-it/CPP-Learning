@@ -13,8 +13,10 @@ int main()
 
 	// F5             -> Start / Continue Debugging
 	// F9             -> Add / Remove Breakpoint
-	// F10            -> Step Over (Next Line)
+	
+	// F10            -> Step Over (without entering the Function)
 	// F11            -> Step Into (Enter Function)
+	
 	// Shift + F11    -> Step Out (Exit Function)
 	// Shift + F5     -> Stop Debugging
 
@@ -28,12 +30,12 @@ int main()
 	cout << a << endl;
 	cout << b << endl;
 	cout << c << endl;
-	for (int i = 1; i <= 5; i++) //<- put the break point here
+	for (int i = 1; i <= 5; i++) //<- (Loop) put the break point here
 	{
 		cout << i << endl;
 		a = a + a * i;
 	}
-	c = MySum(a, b);
+	c = MySum(a, b); //<- (function) put the break point here
 	cout << c;
 	return 0;
 }
