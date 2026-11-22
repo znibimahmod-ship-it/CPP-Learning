@@ -30,8 +30,14 @@ int main() {
 
     /*Lesson #12 - Bitwise AND operator*/
 
-    cout << "Result: " << (12 & 25) ;  /*-Compares each bit of two numbers.- Returns a bitwise result.*/
-    cout << "Result: " << (12 && 25);  /*(true), because both numbers are non-zero*/
+    cout << "Result: " << (12 & 25) << endl;  /*-Compares each bit of two numbers.- Returns a bitwise result.*/
+    cout << "Result: " << (12 && 25) << endl;  /*(true), because both numbers are non-zero*/
+
+    /*Lesson #13 - Bitwise OR operator*/
+
+    cout << "Result: " << (12 | 25) << endl;  /*-Compares each bit of two numbers.- Returns 1 if at least one corresponding bit is 1.*/
+    cout << "Result: " << (12 || 25) << endl;  /*(true), because at least one of the numbers are non-zero*/
+
 
         return 0;
 }
