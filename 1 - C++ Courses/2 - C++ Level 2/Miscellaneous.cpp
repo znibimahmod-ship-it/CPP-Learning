@@ -15,5 +15,18 @@ int main(){
     string Check_Zero_Pos_Neg = N == 0 ? "Number is Zero" : N > 0 ? "Number is Positive" : "Number is Negative";
     cout << Check_Zero_Pos_Neg << endl;
 
+    ////Lesson #10 - Ranged Loop
+    
+    int Array[] = { 1,2,3,4 }; // auto array size
+    //int Array[100] = { 1,2,3,4 }; array with 100 element 
+
+    for (int n : Array) {
+        cout << n << endl;
+    }
+
+    for (int S : {1,2,3} ) {
+        cout << S << endl;
+    }
+
     return 0;
 }
