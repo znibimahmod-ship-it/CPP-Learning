@@ -1,234 +1,315 @@
-#include<iostream>
-#include<string>
-#include<cstdlib>
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+
+#ifdef _WIN32
 #include <windows.h>
+#endif
+
 using namespace std;
 
 enum enLevel { Easy = 1, Med = 2, Hard = 3, Mix = 4 };
 enum enType { Add = 1, Sub = 2, Mult = 3, Div = 4, MixOP = 5 };
 
 struct stInputs {
-	int NumQuestions;
-	enLevel Level;
-	enType Type;
-	enType newOPType;
-	enLevel newGameLevel;
+    int NumQuestions;
+    enLevel Level;
+    enType Type;
+    enType newOPType;
+    enLevel newGameLevel;
 };
+
 struct stQuestion {
-	int UserAnswer = 0;
-	int RightAnswers = 0;
-	int Num1 = 0, Num2 = 0;
+    int UserAnswer = 0;
+    int RightAnswers = 0;
+    int Num1 = 0, Num2 = 0;
 };
 
 int ReadNumberFromTo(string message, int From, int To) {
-	int N;
-	cout << message;
-	cin >> N;
-	while (N < From || N > To) {
-		cout << "(Number must be between " << From << " and " << To << " ): ";
-		cin >> N;
-	}
-	return N;
+    int N;
+    cout << message;
+    cin >> N;
+
+    while (N < From || N > To) {
+        cout << "(Number must be between " << From << " and " << To << " ): ";
+        cin >> N;
+    }
+
+    return N;
 }
 
 int RandNumFromTO(int From, int To) {
 
-	int RanNum = rand() % (To - From + 1) + From;
+    int RanNum = rand() % (To - From + 1) + From;
 
-	return RanNum;
+    return RanNum;
 }
 
 stInputs ReadInputs() {
-	stInputs Input;
-	Input.NumQuestions = ReadNumberFromTo("How Many Questions do you want to answer ? ", 1, 10);
-	Input.Level = (enLevel)ReadNumberFromTo("Enter Questions Level [1] Easy, [2] Med, [3] Hard, [4] Mix ? ", 1, 4);
-	Input.Type = (enType)ReadNumberFromTo("Enter Operations Type [1] Add, [2] Sub, [3] Mul, [4] Div, [5] Mix ? ", 1, 5);
+    stInputs Input;
 
-	return Input;
+    Input.NumQuestions = ReadNumberFromTo("How Many Questions do you want to answer ? ", 1, 10);
+
+    Input.Level = (enLevel)ReadNumberFromTo("Enter Questions Level [1] Easy, [2] Med, [3] Hard, [4] Mix ? ", 1, 4);
+
+    Input.Type = (enType)ReadNumberFromTo("Enter Operations Type [1] Add, [2] Sub, [3] Mul, [4] Div, [5] Mix ? ", 1, 5);
+
+    return Input;
 }
 
 int GetNumByLevel(enLevel inputLevel) {
 
-	switch (inputLevel) {
-	case Easy:
-		return RandNumFromTO(1, 10);
-	case Med:
-		return RandNumFromTO(1, 100);
-	case Hard:
-		return RandNumFromTO(1, 1000);
-	default:
-		return 0;
-	}
+    switch (inputLevel) {
+    case Easy:
+        return RandNumFromTO(1, 10);
+
+    case Med:
+        return RandNumFromTO(1, 100);
+
+    case Hard:
+        return RandNumFromTO(1, 1000);
+
+    default:
+        return 0;
+    }
 }
 
 string OperationSymbol(enType Type) {
-	switch (Type) {
-	case Add:
-		return "+";
-	case Sub:
-		return "-";
-	case Mult:
-		return "*";
-	case MixOP:
-		return "Mix";
-	case Div:
-		return "/";
-	default:
-		return "error wrong input !!";
-	}
+
+    switch (Type) {
+    case Add:
+        return "+";
+
+    case Sub:
+        return "-";
+
+    case Mult:
+        return "*";
+
+    case MixOP:
+        return "Mix";
+
+    case Div:
+        return "/";
+
+    default:
+        return "error wrong input !!";
+    }
 }
 
 string WriteLevel(enLevel level) {
-	switch (level) {
-	case Easy:
-		return "Easy";
-	case Med:
-		return "Meduim";
-	case Hard:
-		return "Hard";
-	case Mix:
-		return "Mix";
-	default:
-		return "error wrong input !!";
-	}
+
+    switch (level) {
+    case Easy:
+        return "Easy";
+
+    case Med:
+        return "Meduim";
+
+    case Hard:
+        return "Hard";
+
+    case Mix:
+        return "Mix";
+
+    default:
+        return "error wrong input !!";
+    }
 }
 
 int RightAnswer(int N1, int N2, enType Type) {
-	switch (Type) {
-	case Add:
-		return N1 + N2;
-	case Sub:
-		return N1 - N2;
-	case Mult:
-		return N1 * N2;
-	case Div:
-		return N1 / N2;
-	default:
-		return 0;
-	}
+
+    switch (Type) {
+    case Add:
+        return N1 + N2;
+
+    case Sub:
+        return N1 - N2;
+
+    case Mult:
+        return N1 * N2;
+
+    case Div:
+        return N1 / N2;
+
+    default:
+        return 0;
+    }
 }
 
 void CheckAnswer(int U_anwser, int R_answer, int& N_RightAnswer, int& N_WrongAnswer) {
 
-	if (R_answer == U_anwser) {
-		system("color 2F");
-		cout << "Right Answer :-)" << endl;
-		N_RightAnswer++;
-	}
-	else if (R_answer != U_anwser) {
-		system("color 4F");
-		MessageBeep(MB_ICONERROR);
-		N_WrongAnswer++;
-		cout << "Wrong Answer :-(" << endl;
-		cout << "The right Answer is: " << R_answer << endl;
-	}
+    if (R_answer == U_anwser) {
+
+#ifdef _WIN32
+        system("color 2F");
+#else
+        cout << "\033[42;30m";
+#endif
+
+        cout << "Right Answer :-)" << endl;
+        N_RightAnswer++;
+    }
+    else if (R_answer != U_anwser) {
+
+#ifdef _WIN32
+        system("color 4F");
+        MessageBeep(MB_ICONERROR);
+#else
+        cout << "\033[41;37m";
+        cout << "\a";
+#endif
+
+        N_WrongAnswer++;
+
+        cout << "Wrong Answer :-(" << endl;
+        cout << "The right Answer is: " << R_answer << endl;
+    }
 }
 
 string Result(int NumQuestion, int NumRightAnswers) {
-	double avg = (double)NumQuestion / 2;
 
-	int Average = ceil(avg);
+    double avg = (double)NumQuestion / 2;
 
-	if (NumRightAnswers >= Average) {
-		system("color 2F");
-		return "Pass :-)";
-	}
-	else if (NumRightAnswers < Average) {
-		system("color 4F");
-		return"Fail :-(";
-	}
+    int Average = ceil(avg);
 
+    if (NumRightAnswers >= Average) {
+
+#ifdef _WIN32
+        system("color 2F");
+#else
+        cout << "\033[42;30m";
+#endif
+
+        return "Pass :-)";
+    }
+    else if (NumRightAnswers < Average) {
+
+#ifdef _WIN32
+        system("color 4F");
+#else
+        cout << "\033[41;37m";
+#endif
+
+        return "Fail :-(";
+    }
+
+    return "";
 }
 
 void checkType(stInputs& Input) {
-	if (Input.Type == MixOP) {
-		Input.newOPType = (enType)RandNumFromTO(1, 4);
-	}
-	else {
-		Input.newOPType = Input.Type;
-	}
+
+    if (Input.Type == MixOP) {
+        Input.newOPType = (enType)RandNumFromTO(1, 4);
+    }
+    else {
+        Input.newOPType = Input.Type;
+    }
 }
 
 void checkLevel(stInputs Input, stQuestion& Question) {
 
-	if (Input.Level == Mix) {
-		Input.newGameLevel = (enLevel)RandNumFromTO(1, 3);
-		Question.Num1 = GetNumByLevel(Input.newGameLevel);
-		Question.Num2 = GetNumByLevel(Input.newGameLevel);
-	}
-	else {
-		Input.newGameLevel = Input.Level;
-		Question.Num1 = GetNumByLevel(Input.newGameLevel);
-		Question.Num2 = GetNumByLevel(Input.newGameLevel);
-	}
+    if (Input.Level == Mix) {
+
+        Input.newGameLevel = (enLevel)RandNumFromTO(1, 3);
+
+        Question.Num1 = GetNumByLevel(Input.newGameLevel);
+        Question.Num2 = GetNumByLevel(Input.newGameLevel);
+    }
+    else {
+
+        Input.newGameLevel = Input.Level;
+
+        Question.Num1 = GetNumByLevel(Input.newGameLevel);
+        Question.Num2 = GetNumByLevel(Input.newGameLevel);
+    }
 }
 
 void ProgrameLoop(stInputs Input, int& NumberRightAnswer, int& NumberWrongAnswer) {
 
-	stQuestion Question;
+    stQuestion Question;
 
-	for (int i = 1; i <= Input.NumQuestions; i++) {
-		//Type
-		checkType(Input);
+    for (int i = 1; i <= Input.NumQuestions; i++) {
 
-		//Level
-		checkLevel(Input, Question);
+        //Type
+        checkType(Input);
 
-		cout << "Question [" << i << "/" << Input.NumQuestions << "]\n";
-		cout << Question.Num1 << endl;
-		cout << Question.Num2 << " " << OperationSymbol(Input.newOPType) << endl;
-		cout << "---------" << endl;
-		cin >> Question.UserAnswer;
+        //Level
+        checkLevel(Input, Question);
 
-		Question.RightAnswers = RightAnswer(Question.Num1, Question.Num2, Input.newOPType);
+        cout << "Question [" << i << "/" << Input.NumQuestions << "]\n";
 
-		CheckAnswer(Question.UserAnswer, Question.RightAnswers, NumberRightAnswer, NumberWrongAnswer);
-	}
+        cout << Question.Num1 << endl;
+        cout << Question.Num2 << " " << OperationSymbol(Input.newOPType) << endl;
 
+        cout << "---------" << endl;
+
+        cin >> Question.UserAnswer;
+
+        Question.RightAnswers = RightAnswer(Question.Num1, Question.Num2, Input.newOPType);
+
+        CheckAnswer(Question.UserAnswer, Question.RightAnswers, NumberRightAnswer, NumberWrongAnswer);
+    }
 }
 
 void ProgrameOutput(stInputs Input, int NumberRightAnswer, int NumberWrongAnswer) {
 
-	cout << "---------------------------------------------\n\n";
-	cout << "          Final Results is " << Result(Input.NumQuestions, NumberRightAnswer) << "          \n\n";
-	cout << "---------------------------------------------\n\n";
-	cout << "Number of Questions    : " << Input.NumQuestions << endl;
-	cout << "Questions Level        : " << WriteLevel(Input.Level) << endl;
-	cout << "OPType                 : " << OperationSymbol(Input.Type) << endl;
-	cout << "Number of Right Answers: " << NumberRightAnswer << endl;
-	cout << "Number of Wrong Answers: " << NumberWrongAnswer << endl << endl;
-	cout << "---------------------------------------------\n\n";
+    cout << "---------------------------------------------\n\n";
+
+    cout << "          Final Results is " << Result(Input.NumQuestions, NumberRightAnswer) << "          \n\n";
+
+    cout << "---------------------------------------------\n\n";
+
+    cout << "Number of Questions    : " << Input.NumQuestions << endl;
+    cout << "Questions Level        : " << WriteLevel(Input.Level) << endl;
+    cout << "OPType                 : " << OperationSymbol(Input.Type) << endl;
+    cout << "Number of Right Answers: " << NumberRightAnswer << endl;
+    cout << "Number of Wrong Answers: " << NumberWrongAnswer << endl << endl;
+
+    cout << "---------------------------------------------\n\n";
 }
 
 void StartPrograme() {
-	char PlayAgain = 'y';
 
-	while (PlayAgain == 'y' || PlayAgain == 'Y') {
+    char PlayAgain = 'y';
 
-		// Reset
-		system("cls");
-		system("color 0F");
+    while (PlayAgain == 'y' || PlayAgain == 'Y') {
 
-		// Inputs
-		stInputs Input = ReadInputs();
+        // Reset
 
-		// LOOP
-		int NumberRightAnswer = 0, NumberWrongAnswer = 0;
-		ProgrameLoop(Input, NumberRightAnswer, NumberWrongAnswer);
+#ifdef _WIN32
+        system("cls");
+        system("color 0F");
+#else
+        system("clear");
+        cout << "\033[0m";
+#endif
 
-		// OutPut
-		ProgrameOutput(Input, NumberRightAnswer, NumberWrongAnswer);
+        // Inputs
+        stInputs Input = ReadInputs();
 
-		// Repeat
-		cout << "Do you want to play again? Y/N? ";
-		cin >> PlayAgain;
-	}
+        // LOOP
+        int NumberRightAnswer = 0, NumberWrongAnswer = 0;
+
+        ProgrameLoop(Input, NumberRightAnswer, NumberWrongAnswer);
+
+        // OutPut
+        ProgrameOutput(Input, NumberRightAnswer, NumberWrongAnswer);
+
+        // Repeat
+        cout << "Do you want to play again? Y/N? ";
+        cin >> PlayAgain;
+    }
 }
 
 int main() {
-	srand((unsigned)time(NULL));
 
-	StartPrograme();
+    srand((unsigned)time(NULL));
 
-	return 0;
+    StartPrograme();
+
+    return 0;
 }
